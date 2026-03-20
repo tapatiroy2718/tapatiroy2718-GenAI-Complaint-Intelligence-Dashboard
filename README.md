@@ -1,1 +1,1 @@
-# tapatiroy2718-GenAI-Complaint-Intelligence-Dashboard
+# GenAI-Complaint-Intelligence-Dashboard
