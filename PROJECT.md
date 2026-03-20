@@ -1,78 +1,206 @@
-# GenAI Complaint Intelligence Dashboard (Hackathon Project)
+# Gen-AI Unified Customer Complaint Communication Dashboard
 
-## 🔥 Project summary
+## Project Overview
 
-This project is a complete end-to-end GenAI solution for customer complaint analytics. It demonstrates:
+The **Gen-AI Unified Customer Complaint Communication Dashboard** is an intelligent system designed to collect, analyze, and manage customer complaints from multiple channels in a centralized platform.
 
-- Synthetic dataset generation (10,000 complaints) via Python
-- Sentiment analysis using TextBlob
-- Semantic clustering with SentenceTransformer embeddings + KMeans
-- Self-learning complaint category classification using LogisticRegression
-- Geospatial complaint heatmap by city
-- Month-over-month trend and delta analytics
-- Hugely interactive Streamlit dashboard (filters, KPIs, maps, charts)
-- Auto-reply generator for live support interaction
-- CSV upload + dynamic retraining capability
+The system uses **Natural Language Processing (NLP)** and **Generative AI techniques** to automatically analyze complaint messages, detect patterns, and assist customer support teams in resolving issues quickly.
 
-## 📁 Files in this repo
+This project demonstrates how AI can help organizations improve **customer service efficiency, issue detection, and decision-making** through data-driven insights.
 
-- `generate_data.py` — generates synthetic complaint dataset
-- `complaints.csv` / `complaints_10k.csv` — generated sample datasets
-- `app.py` — Streamlit dashboard UI with GenAI features
-- `README.md` — setup and demo instructions
-- `PROJECT.md` — polished project description
-- `run_demo.bat` — quick local run script
+---
 
-## 🛠️ How to run
+## Key Features
 
-1. Install dependencies:
+### 1. Complaint Aggregation
 
-   ```powershell
-   pip install pandas streamlit textblob scikit-learn sentence-transformers matplotlib
-   python -m textblob.download_corpora
-   ```
+The system gathers complaints and stores them in a structured dataset.
+Each complaint contains information such as:
 
-2. Generate data:
+* Complaint ID
+* Product name
+* Customer location
+* Complaint text
 
-   ```powershell
-   python generate_data.py
-   ```
+---
 
-3. Start dashboard:
+### 2. Sentiment Analysis
 
-   ```powershell
-   python -m streamlit run app.py
-   ```
+Using NLP techniques, the system determines whether a complaint is:
 
-4. Open browser at `http://localhost:8501`
+* Positive
+* Neutral
+* Negative
 
-## 🧩 Hackathon showcase narrative
+This helps identify **customer satisfaction levels and urgent issues**.
 
-1. Problem: need intelligent ticket triage and root-cause analytics for complaint systems.
-2. Solution: a single dashboard that includes sentiment, clustering, classification, and geo mapping.
-3. Execution: code + data generator + interactive visualization in Streamlit.
-4. Impact: rapid decision-making for support teams and ML-driven insights for product improvements.
+---
 
-## 🌐 GitHub repo link
+### 3. Root Cause Detection
 
-Your code files should be visible here after push:
+The system groups similar complaints using **clustering algorithms**.
+This helps detect recurring issues affecting many customers.
 
-`https://github.com/tapatiroy2718/GenAI-Complaint-Intelligence-Dashboard`
+Example:
 
-If access is still blocked, clear credentials or use SSH and push again:
-
-```powershell
-# using HTTPS
-git remote set-url origin https://github.com/tapatiroy2718/GenAI-Complaint-Intelligence-Dashboard.git
-git push -u origin main
-
-# or using SSH
-git remote set-url origin git@github.com:tapatiroy2718/GenAI-Complaint-Intelligence-Dashboard.git
-ssh-keygen -t ed25519 -C "your-email@example.com"
-# add public key to GitHub
-git push -u origin main
+```
+Complaint 1: Battery drains fast
+Complaint 2: Phone battery dies quickly
+Complaint 3: Battery life very poor
 ```
 
-## ✅ Final result
+AI detects the **root cause → Battery issue**.
 
-This repo is now complete and presentation-ready for hackathon submission. Include a video link and what-if impact slide to impress judges.
+---
+
+### 4. AI Auto Reply Generator
+
+The dashboard can generate **automatic draft responses** for customer complaints.
+
+Example reply:
+
+> Dear Customer,
+> We apologize for the inconvenience caused.
+> Our support team is investigating the issue and will resolve it as soon as possible.
+
+Agents can review and edit the response before sending it.
+
+---
+
+### 5. Live Complaint Stream
+
+The dashboard displays **recent complaints in real time**, allowing support teams to monitor customer feedback as it arrives.
+
+---
+
+### 6. Complaint Trend Visualization
+
+The system provides visual insights including:
+
+* Complaint count by product
+* Sentiment distribution
+* Complaint clusters
+* Complaint locations
+
+These visualizations help identify **emerging trends and critical issues**.
+
+---
+
+### 7. Complaint Heatmap
+
+Complaints are categorized by city or location to understand **geographical distribution of customer issues**.
+
+This helps organizations identify regional problems.
+
+---
+
+## Technologies Used
+
+### Programming Language
+
+* Python
+
+### Libraries
+
+* pandas – data handling
+* streamlit – dashboard interface
+* textblob – sentiment analysis
+* scikit-learn – clustering algorithms
+* sentence-transformers – text embeddings
+* matplotlib – data visualization
+
+---
+
+## Project Structure
+
+```
+Complaint_AI_Dashboard
+│
+├── generate_data.py      # Generates complaint dataset
+├── app.py                # Main dashboard application
+├── complaints.csv        # Dataset of generated complaints
+└── README.md             # Project documentation
+```
+
+---
+
+## How to Run the Project
+
+### Step 1 – Install Required Libraries
+
+```bash
+pip install pandas streamlit textblob scikit-learn sentence-transformers matplotlib
+```
+
+Download NLP resources:
+
+```bash
+python -m textblob.download_corpora
+```
+
+---
+
+### Step 2 – Generate Dataset
+
+Run the dataset generator:
+
+```bash
+python generate_data.py
+```
+
+This will create **complaints.csv** containing sample complaint records.
+
+---
+
+### Step 3 – Run the Dashboard
+
+Start the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+The dashboard will automatically open in your web browser.
+
+---
+
+## Example Dashboard Outputs
+
+The dashboard displays:
+
+* Total complaints
+* Sentiment analysis chart
+* Complaint clusters
+* Product complaint trends
+* Live complaint stream
+* Complaint distribution by city
+
+---
+
+## Benefits of the System
+
+* Centralized complaint management
+* Faster issue detection
+* Automated customer support responses
+* Data-driven decision making
+* Improved customer satisfaction
+
+---
+
+## Future Improvements
+
+The system can be enhanced with:
+
+* Real-time complaint collection from emails and social media
+* Advanced AI summarization of complaints
+* Automatic complaint escalation alerts
+* Predictive analysis for complaint spikes
+
+---
+
+## Conclusion
+
+The **Gen-AI Unified Customer Complaint Communication Dashboard** demonstrates how artificial intelligence can transform customer complaint management by automating analysis, identifying root causes, and providing actionable insights.
+
+This project highlights the potential of AI-powered dashboards in improving **customer service efficiency and business intelligence**.
+
